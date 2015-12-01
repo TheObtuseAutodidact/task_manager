@@ -1,5 +1,14 @@
-<a href='/tasks'>Task Index</a>
+<div class='container'>
+  <div>
+    <h1><%= @task.title %></h1>
+  </div>
 
-<h1><%= @task.title %></h1>
-
-<p><%= @task.description %></p>
+  <div  class='well'>
+    <p><%= @task.description %></p>
+  </div>
+  <footer>
+  <div class='col-md-3'>
+    <a class='btn btn-info btn-block' href="/tasks"href='/tasks'>Task Index</a>
+  </div>
+  </footer>
+</div>

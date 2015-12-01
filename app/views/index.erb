@@ -1,5 +1,18 @@
-<h1>All Tasks</h1>
+<!-- <h1>All Tasks</h1> -->
+<div class='container'>
+  <% @tasks.each do |task| %>
+  <div class='well'>
+    <h3><%= task.id %>: <a href="/tasks/<%= task.id %>"><%= task.title %></a></h3>
+    <a href="/tasks/<%= task.id %>/edit">Edit</a>
+    <form action="/tasks/<%= task.id %>" method="POST">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type='submit' value="delete">
+    </form>
+  </div>
+  <% end %>
 
-<% @tasks.each do |task| %>
-  <h3><%= task.id %>: <a href="/tasks/<%= task.id %>"><%= task.title %></a></h3>
-<% end %>
+  <div class='col-md-3'>
+      <button type='button' class='btn btn-warning btn-block'><a href="/tasks/new">New Task</a></button>
+
+  </div>
+</div>

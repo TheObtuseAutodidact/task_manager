@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Task Manager</title>
+    <link href="/css/bootstrap.css" rel='stylesheet'>
+    <link href='/application.css' rel='stylesheet'>
+  </head>
+  <body>
+
+    <header class='container'>
+      <h2 class='jumbotron container-fluid'>Welcome to the Task Manager</h2>
+    </header>
+    <div class='container-fluid'>
+    <section>
+      <%= yield %>
+    </section>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src='js/bootstrap.js'></script>
+  </body>
+</html>
